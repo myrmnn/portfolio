@@ -1,0 +1,21 @@
+.btn {
+    width: 90%;
+    margin: 1em 0;
+    padding: .5em;
+    font-size: $titleFontSize;
+    border: none;
+    border-radius: 20px;
+    background-color: tomato;
+
+    @media (min-width: $breakpoint-tablet){
+        
+            width: 200px;
+        
+    }
+
+    &:hover,
+    &:focus{
+        animation: pulse 1s;
+        box-shadow: 0 0 0 .75em rgba(#fff, 0);
+    }
+}

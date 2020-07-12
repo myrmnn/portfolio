@@ -1,0 +1,87 @@
+.contact{
+    background-image: linear-gradient(to bottom right, white, $teal);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    &__para{
+        margin-top: -90px;
+        line-height: 1.5;
+        font-size: $textFontSize;
+    }
+
+    @media (min-width: $breakpoint-tablet){
+        height: 50vh;
+        width: 80%;
+        margin: 0 auto;
+        
+        &__para{
+            font-size: $textFontSize + 1;
+            margin-top: -120px;
+            line-height: 1.5;
+
+        }
+
+    }
+}
+
+.contact-form{
+    text-align: center;
+    margin-top: 1em;
+
+    &__title {
+        font-size: $titleFontSize +1.5;
+        letter-spacing: 3px;
+        margin-bottom: 1em;
+        background-image: linear-gradient(to right, tomato, $teal);
+        -webkit-background-clip: text;
+        display: inline-block;
+        color: transparent;
+
+    }
+
+    & form {
+        background-color: rgb(253, 230, 201);
+        padding-top: 1em;
+    }
+
+    & label {
+        display: block;
+        margin: 0 auto;
+        font-size: $textFontSize;
+    }
+
+    & input {
+        font-size: $textFontSize;
+        text-align: center;
+        padding: .25em;
+        margin: .5em;
+        border: 1px solid tomato;
+        outline: none;
+        border-radius: 10px;
+        box-shadow:0 6px 15px 4px rgba(0,0,0,0.06);
+
+        &:focus{
+            box-shadow: 0 8px 6px -6px $teal;        
+        }
+    }
+
+    & textarea{
+        font-size: $textFontSize;
+        padding: .25em;
+        text-align: center;
+        display: block;
+        margin: .5em auto 0 auto;
+        outline: none;
+        border-radius: 10px;
+        width: 90%;
+        border: 1px solid tomato;
+        box-shadow:0 6px 15px 4px rgba(0,0,0,0.06);
+
+        &:focus{
+            box-shadow: 0 10px 6px -6px $teal;        
+        }
+    }
+}
