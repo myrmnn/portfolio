@@ -34,15 +34,20 @@
         list-style-type: none;
         text-align: center;
 
-        & li{
+        & li:not(:first-of-type){
             padding: 1em;
+            margin: .25em;
             width: 100px;
-            transition: .3s ease;
+            border-radius: 25px;
+            transition: .3s linear;
+            background-color: white;
+            box-shadow: 0 8px 6px -6px black;
 
             &:hover:not(:first-of-type){
-                transform: translateY(-5px);
-                background-color: white;
-                box-shadow: 0 8px 6px -6px black;
+                transform: translateY(5px);
+                box-shadow: none;
+                background-color: $lightBlue;
+                
             }
         }
 

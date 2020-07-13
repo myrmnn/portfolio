@@ -1,9 +1,10 @@
 @import
-'./variables/variables', 
-'./header-footer/header-footer', 
+'./variables/variables',
 './animations/animations', 
+'./btn/btn',
 './form/form', 
-'./btn/btn';
+'./header-footer/header-footer', 
+'./projects/projects';
 
 
 //main styles
@@ -15,7 +16,7 @@
 }
 
 html{
-    background-color: white;
+    background-color: #f7f7f7;
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -24,6 +25,7 @@ body{
     background-color: rgb(255, 255, 255);
     font-family: 'Dosis', sans-serif;
     overflow-x: hidden;
+    background-color: white;
 
     @media (min-width: $breakpoint-tablet){
         margin: 30px;
@@ -48,19 +50,30 @@ body{
     }
 }
 
-.col-33{
+.col-20{
     flex-basis: 100%;
+    flex-wrap: wrap;
 
     @media (min-width: $breakpoint-tablet){
-        flex-basis: 30%;
-        margin: 2%;
+        flex-basis: 20%;
+        margin: 3%;
+    }
+}
+
+.col-50{
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    margin: 2%;
+
+    @media (min-width: $breakpoint-tablet){
+        flex-basis: 44%;
     }
 }
 
 //front page
 
 .intro{
-    background-image: linear-gradient(to bottom, #fa6c41, indianred);
+    background-image:  linear-gradient(to bottom, #d07247ca, rgba(205, 92, 92, 0.856));
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
     height: 50vh;
     display: flex;
@@ -70,14 +83,15 @@ body{
     letter-spacing: 2px;
 
     &__title{
-        font-size: $titleFontSize + 1;
+        font-size: $titleFontSize + 2;
         color: whitesmoke;
         margin-bottom: .5em;
         animation: slideInLeft 1.5s ease;
+        margin-top: -100px;
     }
 
     &__subtitle{
-    font-size: $textFontSize + .5;
+    font-size: $textFontSize + 1;
     animation: slideInRight 2.3s ease;
     }
 }
@@ -107,14 +121,14 @@ body{
     margin-top: -55px;
 
     &__icon{
-        width: 150px;
+        width: 200px;
         margin: 40px auto 10px auto;
     }
 
     &__title{
         font-size: $textFontSize;
         margin: 1em;
-        color: darken($teal, 25%);
+        color: $teal;
     }
 
     @media (min-width: $breakpoint-tablet){
@@ -136,7 +150,7 @@ body{
     }
 
     &__icon{
-        width: 160px;
+        width: 110px;
         margin: 2em 0;
     }
     }
