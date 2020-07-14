@@ -32,7 +32,7 @@
     margin-top: 1em;
 
     &__title {
-        font-size: $titleFontSize +1.5;
+        font-size: 4em;
         letter-spacing: 3px;
         margin-bottom: 1em;
         background-image: linear-gradient(to right, tomato, $teal);
@@ -43,7 +43,7 @@
     }
 
     & form {
-        background-color: rgb(253, 230, 201);
+        background-color: $lightOrange;
         padding-top: 1em;
     }
 

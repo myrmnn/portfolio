@@ -122,11 +122,24 @@
   border: none;
   border-radius: 20px;
   background-color: tomato;
+  cursor: pointer;
+}
+
+.btn--card {
+  background-color: white;
+  width: 150px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 12.5%;
 }
 
 @media (min-width: 768px) {
   .btn {
     width: 200px;
+  }
+  .btn--card {
+    width: 150px;
   }
 }
 
@@ -177,7 +190,7 @@
 }
 
 .contact-form__title {
-  font-size: 4.2rem;
+  font-size: 4em;
   letter-spacing: 3px;
   margin-bottom: 1em;
   background-image: -webkit-gradient(linear, left top, right top, from(tomato), to(#3dd0c4));
@@ -188,7 +201,7 @@
 }
 
 .contact-form form {
-  background-color: #fde6c9;
+  background-color: #fdedd8;
   padding-top: 1em;
 }
 
@@ -352,13 +365,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: bisque;
+  background-color: #fdedd8;
   margin-bottom: 6em;
-  padding: 4em 0;
+  padding: 8em 0;
 }
 
 .projects__title {
-  font-size: 3rem;
+  font-size: 4em;
+  letter-spacing: 3px;
   text-align: center;
   margin: 1em 0;
 }
@@ -402,8 +416,8 @@
 }
 
 .card__side--front {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(indianred), to(white));
-  background-image: linear-gradient(to right bottom, indianred, white);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#abdfda), to(white));
+  background-image: linear-gradient(to right bottom, #abdfda, white);
 }
 
 .card__side--front-img {
@@ -413,14 +427,13 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 50%;
 }
 
 .card__side--back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  background-image: -webkit-gradient(linear, right bottom, left top, from(darkseagreen), to(white));
-  background-image: linear-gradient(to left top, darkseagreen, white);
+  background-image: -webkit-gradient(linear, right bottom, left top, from(tomato), to(white));
+  background-image: linear-gradient(to left top, tomato, white);
 }
 
 .card:hover .card__side--front {

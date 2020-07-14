@@ -2,13 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: bisque;
+    background-color: rgb(253, 237, 216);
     margin-bottom: 6em;
-    padding: 4em 0;
+    padding: 8em 0;
 }
 
 .projects__title{
-    font-size: 3rem;
+  font-size: 4em;
+  letter-spacing: 3px;
     text-align: center;
     margin: 1em 0;
 }
@@ -45,7 +46,7 @@
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   
       &--front {
-        background-image: linear-gradient(to right bottom, indianred, white);
+        background-image: linear-gradient(to right bottom, #abdfda, white);
   
         &-img {
           position: absolute;
@@ -53,13 +54,12 @@
           top: 40%;
           left: 50%;
           transform: translate(-50%, -50%);
-          border-radius: 50%;
         }
       }
   
       &--back {
         transform: rotateY(180deg);
-        background-image: linear-gradient(to left top, darkseagreen, white);
+        background-image: linear-gradient(to left top, tomato, white);
   
       }
     }
