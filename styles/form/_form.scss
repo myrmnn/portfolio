@@ -1,20 +1,28 @@
 .contact{
-    background-image: linear-gradient(to bottom right, white, $teal);
+    background-image: linear-gradient(to bottom right, tomato, indianred);
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     height: 50vh;
     text-align: center;
     display: flex;
     justify-content: center;
 
+    &__span,
+    &__span q{
+        font-size: $textFontSize + .75;
+        padding: .15em;
+        color: white;
+    }
+
     &__para{
         margin-top: -90px;
-        line-height: 1.5;
+        line-height: 2;
         font-size: $textFontSize;
     }
 
     @media (min-width: $breakpoint-tablet){
         height: 50vh;
-        width: 80%;
+        width: 60%;
+        padding: 1em;
         margin: 0 auto;
         
         &__para{

@@ -15,6 +15,17 @@
         position: absolute;
         top:20%;
         left: 12.5%;
+
+        &-bottom{
+            background-color: darkcyan;
+            top: 55%;
+        }
+
+    & a{
+        text-decoration: none;
+        color: black;
+        font-size: $textFontSize;
+    }
     }
 
     @media (min-width: $breakpoint-tablet){

@@ -45,9 +45,7 @@
 
             &:hover:not(:first-of-type){
                 transform: translateY(5px);
-                box-shadow: none;
-                background-color: $lightBlue;
-                
+                box-shadow: none;                
             }
         }
 

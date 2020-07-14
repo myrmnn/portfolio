@@ -1,10 +1,10 @@
 @import
 './variables/variables',
+'./projects/projects',
 './animations/animations', 
 './btn/btn',
 './form/form', 
-'./header-footer/header-footer',
-'./projects/projects';
+'./header-footer/header-footer';
 
 
 //main styles
@@ -51,7 +51,7 @@ body{
 }
 
 .col-20{
-    flex-basis: 100%;
+    flex-basis: 44%;
     flex-wrap: wrap;
 
     @media (min-width: $breakpoint-tablet){
@@ -73,7 +73,7 @@ body{
 //front page
 
 .intro{
-    background-image:  linear-gradient(to bottom, #d07247ca, rgba(205, 92, 92, 0.856));
+    background-image:  linear-gradient(to bottom, tomato, rgba(205, 92, 92, 0.856));
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
     height: 50vh;
     display: flex;
@@ -127,6 +127,7 @@ body{
 
     &__title{
         font-size: $textFontSize;
+    font-family: 'Courier New', Courier, monospace;
         margin: 1em;
         color: $teal;
     }
