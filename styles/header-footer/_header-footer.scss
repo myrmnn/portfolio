@@ -11,19 +11,6 @@
         &:hover{
             transform: translateX(-10%);;
         }
-        
-        @media (min-width: $breakpoint-tablet) {
-            width: 75px;
-        }
-    }
-
-    &__icon {
-        font-size: $titleFontSize;
-    }
-
-    &__title{
-        font-size: $textFontSize;
-        color: rgb(54, 141, 137);
     }
 
     &__list{
@@ -35,12 +22,12 @@
         text-align: center;
 
         & li:not(:first-of-type){
-            padding: 1em;
-            margin: .25em;
+            padding: .5em;
+            margin: .5em;
             width: 100px;
             border-radius: 25px;
             transition: .3s linear;
-            background-color: white;
+            background-color: whitesmoke;
             box-shadow: 0 8px 6px -6px black;
 
             &:hover:not(:first-of-type){
@@ -59,6 +46,14 @@
 @media (min-width: $breakpoint-tablet){
     &__list {
         flex-direction: row;
+    }
+
+    .robot {
+        width: 75px;
+    }
+
+    &__list li:not(:first-of-type){
+        padding: 1em;
     }
 }
 
