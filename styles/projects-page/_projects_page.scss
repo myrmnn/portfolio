@@ -1,5 +1,11 @@
 .project-section{
     margin: 2em .5em;
+
+    &__header{
+      text-align: center;
+      font-size: $titleFontSize;
+      margin-top: 1em;
+    }
 }
 
 //////////
@@ -167,21 +173,10 @@ margin: 0 auto;
   
   .star {
     opacity: 0;
-    clip-path: polygon(
-      50% 0%,
-      61% 35%,
-      98% 35%,
-      68% 57%,
-      79% 91%,
-      50% 70%,
-      21% 91%,
-      32% 57%,
-      2% 35%,
-      39% 35%
-    );
+    clip-path: polygon(43% 42%, 13% 26%, 39% 48%, 16% 71%, 44% 53%, 48% 96%, 51% 53%, 78% 72%, 55% 46%, 83% 26%, 51% 42%, 47% 1%);
     background: aliceblue;
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
     position: absolute;
     transform: translateY(-300px);
   }
@@ -405,8 +400,8 @@ margin: 0 auto;
   
   .star:nth-child(5n + 5) {
     animation: 10s linear infinite fall;
-    height: 20px;
-    width: 20px;
+    height: 22px;
+    width: 22px;
   }
   .star:nth-child(3n + 2) {
     animation: 15s linear 2s infinite fall;
@@ -472,9 +467,10 @@ margin: 0 auto;
   
   .stars {
     width: 13px;
-    height: 13px;
+    height: 11px;
     background: white;
     position: absolute;
+    border: none;
     left: 400px;
     top: 50px;
     clip-path: polygon(
@@ -492,7 +488,7 @@ margin: 0 auto;
   }
   
   .stars:nth-of-type(even) {
-    height: 20px;
+    height: 18px;
     width: 20px;
     animation: star 10s linear infinite;
   }
@@ -672,3 +668,274 @@ margin: 0 auto;
     }
   }
   
+/////////  
+//clock//
+/////////  
+
+/* .clock-wrapper {
+  background: whitesmoke;
+  text-align: center;
+  font-size: 10px;
+} */
+
+.clock-frame {
+  font-size: 10px;
+  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.clock {
+  width: 20rem;
+  height: 20rem;
+  border: 10px solid #0b76a6;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  background-image: url(https://images.unsplash.com/photo-1508615039623-a25605d2b022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.dot {
+  background-color: #0b76a6;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  width: 50%;
+  height: 3px;
+  background: black;
+  position: absolute;
+  border-radius: 5px;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  /* transition: all 0.5s; */
+}
+
+.hour-hand {
+  background-color: #0b76a6;
+  height: 5px;
+}
+
+////////
+//dice//
+////////
+  
+body {
+  background-color: whitesmoke;
+}
+#main {
+  width: 300px;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+  background: #336b32;
+}
+
+i {
+  font-size: 60px;
+  color: white;
+  padding: 0;
+  margin: 0 0.35em;
+}
+
+.dice-button {
+  padding: 10px;
+  font-size: 25px;
+  outline: none;
+  color: white;
+  background: #061f36;
+  margin-bottom: 35px;
+  width: 100%;
+  border: none;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  font-family: 'Righteous', cursive;
+}
+
+button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dice-title {
+  background: white;
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 40px 0;
+  font-size: 35px;
+  color: #061f36;
+}
+
+.dice-p {
+  font-size: 35px;
+  color: #ebd244;
+  margin: 0.5em 0;
+  font-weight: 700;
+}
+
+#num {
+  font-size: 65px;
+}
+@mixin animation-name($name) {
+  animation-name: $name;
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -ms-animation-name: $name;
+}
+
+@mixin animation-duration($duration) {
+  animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -ms-animation-duration: $duration;
+}
+
+@mixin animation-timing-function($func) {
+  animation-timing-function: $func;
+  -webkit-animation-timing-function: $func;
+  -moz-animation-timing-function: $func;
+  -ms-animation-timing-function: $func;
+}
+
+@mixin animation($name, $duration, $timing-func) {
+  @include animation-name($name);
+  @include animation-duration($duration);
+  @include animation-timing-function($timing-func);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) translatey(0px);
+  }
+
+  25% {
+    transform: rotate(25deg) translatey(-20px);
+  }
+
+  100% {
+    transform: rotate(-360deg) translatey(0px);
+  }
+}
+
+@keyframes counter-spin {
+  0% {
+    transform: rotate(0deg) translatey(0px);
+  }
+
+  25% {
+    transform: rotate(-25deg) translatey(-20px);
+  }
+
+  100% {
+    transform: rotate(360deg) translatey(0px);
+  }
+}
+
+#num.bounce-animation {
+  @include animation(bounce, 0.5s, ease-in);
+}
+
+.die2.spin-animation {
+  @include animation(spin, 0.5s, ease);
+}
+
+.die1.counter-spin-animation {
+  @include animation(counter-spin, 0.5s, ease);
+}
+
+/////////
+//timer//
+/////////
+
+.dial {
+  height: 400px;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.timer {
+  position: relative;
+}
+
+.timer input {
+  display: block;
+  color: black;
+  border: none;
+  width: 240px;
+  font-size: 70px;
+  text-align: center;
+  background-color: skyblue;
+}
+
+.timer input:active{
+  color: black;
+}
+
+.timer button {
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.timer button:focus {
+  outline: none;
+}
+
+.timer input:focus {
+  outline: none;
+}
+
+.timer-btn{
+  color: black;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
