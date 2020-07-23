@@ -1,16 +1,23 @@
 .header{
-    background-color: white;
-    padding: 2em;
+    background-color: white; 
+    padding: 2em;  
     background-color: $lightBlue;
-
-    & .robot{
+    position: relative;
+  
+    & .robot{  
         width: 50px;
         transition: .3s ease-in;
-        animation: slideInLeftRobot 6s ease;
+        animation: slideInLeftRobot 6s ease; 
     
         &:hover{
             transform: translateX(-10%);;
         }
+    }
+
+    &__span{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: $textFontSize;
+        font-weight: 600;
     }
 
     &__list{

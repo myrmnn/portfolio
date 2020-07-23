@@ -1,7 +1,7 @@
 .contact{
     background-image: linear-gradient(to bottom right, tomato, indianred);
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-    height: 50vh;
+    height: 55vh;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -16,6 +16,7 @@
     &__para{
         margin-top: -90px;
         line-height: 2;
+        padding: .25em;
         font-size: $textFontSize;
     }
 
@@ -26,12 +27,24 @@
         margin: 0 auto;
         
         &__para{
-            font-size: $textFontSize + .5;
-            margin-top: -120px;
-            line-height: 1.5;
+            margin-top: -140px;
+            line-height: 2;
 
         }
+    }
 
+    @media (min-width: $breakpoint-xl-tablet){
+        height: 40vh;
+
+        &__para {
+        font-size: $textFontSize + .5;
+        }
+    }
+
+    @media (min-width: $breakpoint-desktop){
+        &__para{
+            margin-top: -130px;
+        }
     }
 }
 
@@ -64,8 +77,8 @@
     & input {
         font-size: $textFontSize;
         text-align: center;
-        padding: .25em;
-        margin: .5em;
+        padding: .25em 0;
+        margin: .5em 0;
         border: 1px solid tomato;
         outline: none;
         border-radius: 10px;

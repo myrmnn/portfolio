@@ -1,6 +1,7 @@
 @import
 './variables/variables',
 './projects/projects',
+'./projects-page/projects_page',
 './animations/animations', 
 './btn/btn',
 './form/form', 
@@ -81,6 +82,7 @@ body{
     align-items: center;
     flex-direction: column;
     letter-spacing: 2px;
+    text-align: center;
 
     &__title{
         font-size: $titleFontSize + 2;
