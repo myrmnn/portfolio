@@ -34,7 +34,7 @@
     }
 
     @media (min-width: $breakpoint-xl-tablet){
-        height: 40vh;
+        height: 40vh; 
 
         &__para {
         font-size: $textFontSize + .5;
@@ -85,7 +85,7 @@
         box-shadow:0 6px 15px 4px rgba(0,0,0,0.06);
 
         &:focus{
-            box-shadow: 0 8px 6px -6px $teal;        
+            border: 1px solid #abdfda;          
         }
     }
 
@@ -102,7 +102,7 @@
         box-shadow:0 6px 15px 4px rgba(0,0,0,0.06);
 
         &:focus{
-            box-shadow: 0 10px 6px -6px $teal;        
+            border: 1px solid #abdfda;       
         }
     }
 }

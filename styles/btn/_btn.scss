@@ -9,6 +9,10 @@
     cursor: pointer;
     outline: none;
 
+    &--projects{
+        background-color: #abdfda;
+    }
+
     &--card{
         background-color: white;
         width: 150px;

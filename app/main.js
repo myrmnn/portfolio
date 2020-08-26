@@ -4,7 +4,7 @@ const li = document.querySelectorAll('li');
 
 
 document.addEventListener('scroll', function(){
-  if(window.scrollY > 30 && window.innerWidth > 768){
+  if(window.scrollY > 0 && window.innerWidth > 768){
       robot.style.width = '50px';
     li.forEach(el => el.style.padding = '.5em');
   } else if(window.scrollY < 30 && window.innerWidth > 768){

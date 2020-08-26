@@ -3,10 +3,15 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: #3dd0c4;
-    margin-bottom: 6em;
+    margin-bottom: 3em;
     padding: 8em 0;
     text-align: center;
+
+    &__div{
+      margin-bottom: 3em;
+    }
 }
+
 
 .projects__title{
   font-size: 4em;

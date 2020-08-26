@@ -8,9 +8,13 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #3dd0c4;
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   padding: 8em 0;
   text-align: center;
+}
+
+.projects__div {
+  margin-bottom: 3em;
 }
 
 .projects__title {
