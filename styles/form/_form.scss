@@ -47,7 +47,7 @@
         }
     }
 }
-
+ 
 .contact-form{
     text-align: center;
     margin-top: 1em;
@@ -58,6 +58,7 @@
         margin-bottom: 1em;
         background-image: linear-gradient(to right, tomato, $teal);
         -webkit-background-clip: text;
+        background-clip: text;
         display: inline-block;
         color: transparent;
 

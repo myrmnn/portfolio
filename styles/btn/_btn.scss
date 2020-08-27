@@ -1,8 +1,11 @@
+
+
 .btn {
     width: 90%;
     margin: 1em 0; 
     padding: .5em;
-    font-size: $textFontSize;
+    font-size: $textFontSize; 
+    font-family: 'Dosis', sans-serif;
     border: none;  
     border-radius: 20px;
     background-color: tomato;
@@ -18,7 +21,7 @@
         width: 150px;
         margin: 0 auto;
         position: absolute;
-        top:20%;
+        top: 20%;
         left: 12.5%;
 
         &-bottom{
@@ -30,6 +33,7 @@
         text-decoration: none;
         color: black;
         font-size: $textFontSize;
+        font-family: 'Dosis', sans-serif;
     }
     }
 

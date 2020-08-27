@@ -1,5 +1,5 @@
 .aboutMe{
-    background-image:  linear-gradient(to bottom, tomato, rgba(205, 92, 92, 0.856));
+    background-image:  linear-gradient(to bottom, tomato, rgb(205, 92, 92));
     clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
     height: 50vh;
     display: flex;
@@ -24,11 +24,12 @@
 }
 
 .writeup{
-    background-color: bisque;
-    margin-top: -140px;
+    background-color: $lightOrange;
     padding-bottom: 1em;
+    margin: -185px auto 0 auto;
 
     &__para{
+    max-width: 800px;
         font-size: 2rem;
         line-height: 1.8;
         margin: 1em;
@@ -43,9 +44,8 @@
 li{
     list-style-type: none;
     font-size: 2rem;
-    font-weight: 700;
 }
 
 .first{
-    padding-top: 150px;
+    padding-top: 180px;
 }

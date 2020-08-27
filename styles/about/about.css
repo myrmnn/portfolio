@@ -1,6 +1,6 @@
 .aboutMe {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(tomato), to(rgba(205, 92, 92, 0.856)));
-  background-image: linear-gradient(to bottom, tomato, rgba(205, 92, 92, 0.856));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(tomato), to(indianred));
+  background-image: linear-gradient(to bottom, tomato, indianred);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
   height: 50vh;
@@ -38,7 +38,7 @@
 
 .writeup {
   background-color: bisque;
-  margin-top: -140px;
+  margin-top: -185px;
   padding-bottom: 1em;
 }
 
@@ -58,10 +58,9 @@
 li {
   list-style-type: none;
   font-size: 2rem;
-  font-weight: 700;
 }
 
 .first {
-  padding-top: 150px;
+  padding-top: 180px;
 }
 /*# sourceMappingURL=about.css.map */
