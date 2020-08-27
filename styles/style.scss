@@ -1,14 +1,11 @@
-@import 
-'./variables/variables',
-'./projects-page/projects_page',
-'./animations/animations', 
-'./btn/btn',
-'./form/form', 
-'./header-footer/header-footer';
-
-@import
-'./projects/projects',
-'./about/about.scss';
+@import './variables/variables',
+ './projects-page/projects_page',
+ './animations/animations', 
+ './btn/btn',
+ './form/form',
+ './header-footer/header-footer',
+ './projects/projects.scss',
+ './about/about.scss';
 
 
 
@@ -171,6 +168,3 @@ body{
         margin: 2em 0;
     }
     }
-
-
-
