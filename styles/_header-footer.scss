@@ -1,14 +1,68 @@
 @import 'variables';
 
+.menu {
+	position: absolute;
+	height: 20px;
+	width: 22.5px;
+	top: 25px;
+	right: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	@media (min-width: $breakpoint-tablet) {
+		display: none;
+	}
+}
+
+.topbar {
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform-origin: 0 100%;
+}
+
+.middlebar {
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.bottombar {
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform-origin: 0 100%;
+}
+
+.close .topbar {
+	transform: rotate(42deg) scaleX(1.2);
+	background-color: tomato;
+}
+
+.close .middlebar {
+	opacity: 0;
+	transform: scaleX(0);
+}
+
+.close .bottombar {
+	transform: rotate(-42deg) scaleX(1.2);
+	background-color: tomato;
+}
+
 .header {
 	padding: 1em;
 	background-color: $lightBlue;
 	position: sticky;
 	top: -1px;
-	z-index: 3;
+	z-index: 2;
 	margin: 0;
 
-	&__li:not(:first-of-type) {
+	&__li {
 		padding: 0.6em;
 		margin: 0.5em;
 		color: pink;
@@ -42,12 +96,16 @@
 	}
 
 	&__list {
-		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
 		list-style-type: none;
 		text-align: center;
+		display: none;
+
+		@media (min-width: $breakpoint-tablet) {
+			display: flex;
+		}
 
 		& a {
 			text-decoration: none;

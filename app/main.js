@@ -1,6 +1,13 @@
 //header
 const robot = document.querySelector('.robot');
 const li = document.querySelectorAll('.header__li');
+const menuBar = document.querySelector('.menu');
+const nav = document.querySelector('.header__list');
+
+menuBar.addEventListener('click', function () {
+	menuBar.classList.toggle('close');
+	nav.classList.toggle('show');
+});
 
 document.addEventListener('scroll', function () {
 	if (window.scrollY > 0 && window.innerWidth > 768) {

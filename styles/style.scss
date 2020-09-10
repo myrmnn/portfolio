@@ -1,6 +1,9 @@
 @import 'variables', 'animations', 'btn', 'form', 'header-footer', 'projects';
 
 //main styles
+.show {
+	display: flex;
+}
 
 * {
 	padding: 0;
@@ -11,8 +14,8 @@
 
 html {
 	background-color: #f7f7f7;
-	max-width: 1300px;
 	margin: 0 auto;
+	max-width: 1300px;
 }
 
 body {
