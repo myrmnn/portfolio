@@ -1,0 +1,51 @@
+.aboutMe {
+	background-image: linear-gradient(to bottom, tomato, rgb(205, 92, 92));
+	clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	letter-spacing: 2px;
+	text-align: center;
+
+	&__title {
+		font-size: 4.7rem;
+		color: whitesmoke;
+		margin-bottom: 0.5em;
+		animation: slideInLeft 1.5s ease;
+		margin-top: -100px;
+	}
+
+	&__subtitle {
+		font-size: 3.2rem;
+		animation: slideInRight 2.3s ease;
+	}
+}
+
+.writeup {
+	background-color: $lightOrange;
+	padding-bottom: 1em;
+	margin: -185px auto 0 auto;
+
+	&__para {
+		max-width: 800px;
+		font-size: 2rem;
+		line-height: 1.8;
+		margin: 1em;
+
+		@media (min-width: 768px) {
+			width: 50%;
+			margin: 1em auto;
+		}
+	}
+}
+
+li {
+	list-style-type: none;
+	font-size: 2rem;
+}
+
+.first {
+	padding-top: 180px;
+}
