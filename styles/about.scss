@@ -1,3 +1,5 @@
+@import 'variables';
+
 .aboutMe {
 	background-image: linear-gradient(to bottom, tomato, rgb(205, 92, 92));
 	clip-path: polygon(0 0, 100% 0, 100% 76%, 0 100%);
@@ -38,6 +40,10 @@
 			width: 50%;
 			margin: 1em auto;
 		}
+	}
+
+	&__list {
+		font-weight: bold;
 	}
 }
 

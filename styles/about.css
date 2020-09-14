@@ -24,7 +24,7 @@
 .aboutMe__title {
   font-size: 4.7rem;
   color: whitesmoke;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   -webkit-animation: slideInLeft 1.5s ease;
           animation: slideInLeft 1.5s ease;
   margin-top: -100px;
@@ -37,12 +37,13 @@
 }
 
 .writeup {
-  background-color: bisque;
-  margin-top: -185px;
+  background-color: #ffe4c46b;
   padding-bottom: 1em;
+  margin: -185px auto 0 auto;
 }
 
 .writeup__para {
+  max-width: 800px;
   font-size: 2rem;
   line-height: 1.8;
   margin: 1em;
@@ -53,6 +54,10 @@
     width: 50%;
     margin: 1em auto;
   }
+}
+
+.writeup__list {
+  font-weight: bold;
 }
 
 li {

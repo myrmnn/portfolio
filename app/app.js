@@ -1,150 +1,80 @@
+//cats
 
+let para1 = document.querySelector('.cat-frame__para1');
+let para2 = document.querySelector('.cat-frame__para2');
+let catBtn = document.querySelector('.cat-frame__btn');
+let img = document.querySelector('.cat-frame__img');
 
-//clock
+catBtn.addEventListener('click', function () {
+	let XHR = new XMLHttpRequest();
+	XHR.onreadystatechange = function () {
+		if (XHR.readyState == 4 && XHR.status == 200) {
+			let data = JSON.parse(XHR.responseText);
+			let random = Math.floor(Math.random() * data.all.length);
+			let random2 = Math.floor(Math.random() * data.all.length);
+			console.log(data.all[random].text);
+			para1.innerText = `Fun Fact! Did you know that ${data.all[random].text}`;
+			para2.innerText = `Or that ${data.all[random2].text}`;
+		} else {
+			console.log(`status: ${XHR.status}`);
+		}
+	};
 
-const secondHand = document.querySelector(".second-hand");
-const minHand = document.querySelector(".min-hand");
-const hourHand = document.querySelector(".hour-hand");
+	XHR.open('GET', 'https://cat-fact.herokuapp.com/facts');
+	XHR.send();
 
-function setDate() {
-  const now = new Date();
-  const seconds = now.getSeconds();
-  const secondsDegrees = (seconds / 60) * 360 + 90;
-  secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-  //   console.log(seconds)
+	let CATIMG = new XMLHttpRequest();
+	CATIMG.onreadystatechange = function () {
+		if (CATIMG.readyState == 4 && CATIMG.status == 200) {
+			let data = JSON.parse(CATIMG.responseText)[0].url;
 
-  const mins = now.getMinutes();
-  const minsDegrees = (mins / 60) * 360 + 90;
-  minHand.style.transform = `rotate(${minsDegrees}deg)`;
-  // console.log(mins)
+			img.src = data;
+		} else {
+			console.log(`status: ${CATIMG.status}`);
+		}
+	};
 
-  const hour = now.getHours();
-  const hourDegrees = (hour / 12) * 360 + 90;
-  hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-}
-
-setInterval(setDate, 1000);
-
+	CATIMG.open('GET', 'https://api.thecatapi.com/v1/images/search?size=full');
+	CATIMG.send();
+});
 
 //dice
 
-const num = document.getElementById("num");
-const btn = document.querySelector("button");
-const die1 = document.querySelector(".die1");
-const die2 = document.querySelector(".die2");
+const num = document.getElementById('num');
+const btn = document.querySelector('.dice-button');
+const die1 = document.querySelector('.die1');
+const die2 = document.querySelector('.die2');
 
-btn.addEventListener("click", function () {
-  roll();
-  num.classList.add("bounce-animation");
-  die2.classList.add("spin-animation");
-  die1.classList.add("counter-spin-animation");
-  setTimeout(function () {
-    num.classList.remove("bounce-animation");
-    die2.classList.remove("spin-animation");
-    die1.classList.remove("counter-spin-animation");
-  }, 500);
+btn.addEventListener('click', function () {
+	roll();
+	num.classList.add('bounce-animation');
+	die2.classList.add('spin-animation');
+	die1.classList.add('counter-spin-animation');
+	setTimeout(function () {
+		num.classList.remove('bounce-animation');
+		die2.classList.remove('spin-animation');
+		die1.classList.remove('counter-spin-animation');
+	}, 500);
 });
 
 function roll() {
-  let result = Math.floor(Math.random() * 12 + 1);
-  num.innerHTML = `${result}`;
+	let result = Math.floor(Math.random() * 12 + 1);
+	num.innerHTML = `${result}`;
 }
 
-//timer
+//tipcalc
 
-class Timer {
-    constructor(durationInput, startButton, pauseButton, callbacks) {
-      this.durationInput = durationInput;
-      this.startButton = startButton;
-      this.pauseButton = pauseButton;
-      if (callbacks) {
-        this.onStart = callbacks.onStart;
-        this.onTick = callbacks.onTick;
-        this.onComplete = callbacks.onComplete;
-      }
-  
-      this.startButton.addEventListener("click", this.start);
-      this.pauseButton.addEventListener("click", this.pause);
-    }
-  
-    start = () => {
-      if (this.onStart) {
-        this.onStart(this.timeRmaining);
-        durationInput.style.color = "black";
-      }
-      this.tick();
-      this.interval = setInterval(this.tick, 50);
-    };
-  
-    pause = () => {
-      clearInterval(this.interval);
-    };
-  
-    tick = () => {
-      if (this.timeRmaining <= 0) {
-        this.pause();
-        if (this.onComplete) {
-          this.onComplete();
-        }
-      } else {
-        const timeRmaining = this.timeRmaining;
-        this.timeRmaining = timeRmaining - 0.05;
-        if (this.onTick) {
-          this.onTick(this.timeRmaining);
-        }
-      }
-  
-      if (this.timeRmaining <= 5) {
-        durationInput.style.color = "red";
-      }
+let billAmount = document.querySelector('.tip__bill');
+let tipPercent = document.querySelector('.tip__percent');
+let tipBtn = document.querySelector('.tip__btn');
+let para = document.querySelector('.tip__total');
 
-      if (this.timeRmaining <= 0){
-        durationInput.style.color = "black";
-      }
-    };
-  
-    get timeRmaining() {
-      return parseFloat(this.durationInput.value);
-    }
-  
-    set timeRmaining(time) {
-      return (this.durationInput.value = time.toFixed(2));
-    }
-  
-    onComplete = () => {
-      if (this.onComplete) {
-        this.onComplete();
-      }
-    };
-  }
-  
-  const durationInput = document.querySelector("#duration");
-  const startButton = document.querySelector("#start");
-  const pauseButton = document.querySelector("#pause");
-  const circle = document.querySelector("circle");
-  
-  const perimeter = circle.getAttribute("r") * 2 * Math.PI;
-  circle.setAttribute("stroke-dasharray", perimeter);
-  
-  let duration;
-  
-  const timer = new Timer(durationInput, startButton, pauseButton, {
-    onStart(totalDuration) {
-      duration = totalDuration;
-    },
-  
-    onTick(timeRemaining) {
-      circle.setAttribute(
-        "stroke-dashoffset",
-        (perimeter * timeRemaining) / duration - perimeter
-      );
-      console.log("this is on tick");
-    },
-  
-    onComplete() {
-      console.log("Timer done");
-      circle.setAttribute("fill", "thistle");
-      durationInput.style.backgroundColor = "transparent";
-    }
-  });
-  
+tipBtn.addEventListener('click', () => {
+	let tipAmount = Number(billAmount.value) * Number(tipPercent.value / 100);
+	let billTotal = (
+		Number(tipAmount.toFixed(2)) + Number(billAmount.value)
+	).toFixed(2);
+	para.innerText = `Tip Amount: $${tipAmount.toFixed(
+		2
+	)} - Total Bill: $${billTotal}`;
+});

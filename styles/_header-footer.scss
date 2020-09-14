@@ -72,7 +72,7 @@
 		background-color: whitesmoke;
 		box-shadow: 0 8px 6px -6px black;
 
-		&:hover:not(:first-of-type) {
+		&:hover {
 			transform: translateY(5px);
 			box-shadow: none;
 		}
@@ -123,7 +123,7 @@
 			width: 75px;
 		}
 
-		&__list li:not(:first-of-type) {
+		&__list {
 			padding: 0.75em;
 		}
 	}

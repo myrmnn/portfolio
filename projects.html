@@ -68,52 +68,13 @@
 			</div>
 		</section>
 
-		<section class="project-section">
-			<div class="star-wrapper">
-				<div class="star-container">
-					<div class="moon"></div>
-					<div class="star star1"></div>
-					<div class="star star2"></div>
-					<div class="star star3"></div>
-					<div class="star star4"></div>
-					<div class="star star5"></div>
-					<div class="star star6"></div>
-					<div class="star star7"></div>
-					<div class="star star8"></div>
-					<div class="star star9"></div>
-					<div class="star star10"></div>
-					<div class="star star11"></div>
-					<div class="star star12"></div>
-					<div class="star star13"></div>
-					<div class="star star14"></div>
-					<div class="star star15"></div>
-					<div class="star star16"></div>
-					<div class="star star17"></div>
-					<div class="star star18"></div>
-					<div class="star star19"></div>
-					<div class="star star20"></div>
-					<div class="star star21"></div>
-					<div class="star star22"></div>
-					<div class="star star23"></div>
-					<div class="star star24"></div>
-					<div class="star star25"></div>
-					<div class="star star26"></div>
-					<div class="star star27"></div>
-					<div class="star star28"></div>
-					<div class="star star29"></div>
-					<div class="star star30"></div>
-					<div class="star star31"></div>
-					<div class="star star32"></div>
-					<div class="star star33"></div>
-					<div class="star star34"></div>
-					<div class="star star35"></div>
-					<div class="star star36"></div>
-					<div class="star star37"></div>
-					<div class="star star38"></div>
-					<div class="star star30"></div>
-					<div class="star star40"></div>
-					<div class="star star41"></div>
-				</div>
+		<section class="petal-container">
+			<div class="petal-box">
+				<div class="petal"></div>
+				<div class="petal"></div>
+				<div class="petal"></div>
+				<div class="petal"></div>
+				<div class="petal-dot"></div>
 			</div>
 		</section>
 
@@ -245,20 +206,22 @@
 
 		<h2 class="project-section__header">Javascript Projects</h2>
 
-		<section class="project-section">
-			<div class="clock-wrapper">
-				<div class="clock-frame">
-					<div class="clock">
-						<div class="clock-face">
-							<div class="hand hour-hand"></div>
-							<div class="hand min-hand"></div>
-							<div class="hand second-hand"></div>
-						</div>
-						<div class="dot"></div>
-					</div>
-				</div>
-			</div>
-		</section>
+		<div class="cat-frame">
+			<h2 class="cat-frame__title">
+				Cat Facts <i class="fas fa-cat cat-frame__icon-title"></i>
+			</h2>
+			<p class="cat-frame__para1">Ready for some...</p>
+			<img
+				src="https://cdn2.thecatapi.com/images/b66.jpg"
+				alt="cat"
+				class="cat-frame__img"
+			/>
+			<p class="cat-frame__para2">Cat Facts?</p>
+
+			<button class="cat-frame__btn">
+				Click for meow facts<i class="fas fa-paw cat-frame__icon-btn"></i>
+			</button>
+		</div>
 
 		<section class="project-section">
 			<div id="main">
@@ -271,26 +234,21 @@
 			</div>
 		</section>
 
-		<section class="project-section">
-			<div class="timer">
-				<div class="controls">
-					<input id="duration" value="10" />
+		<section>
+			<div class="tip">
+				<div class="tip__center">
+					<h1 class="tip__title">Tip Calculator</h1>
+					<p class="tip__total">$$$</p>
 					<div>
-						<button id="start"><i class="fas fa-play timer-btn"></i></button>
-						<button id="pause"><i class="fas fa-pause timer-btn"></i></button>
+						<p class="tip__text">Bill Amount:</p>
+						<input type="text" class="tip__bill" />
 					</div>
+					<div>
+						<p class="tip__text">Tip %:</p>
+						<input type="number" class="tip__percent" />
+					</div>
+					<button class="tip__btn">Calculate</button>
 				</div>
-				<svg class="dial">
-					<circle
-						fill="skyblue"
-						stroke="blue"
-						stroke-width="15"
-						r="190"
-						cx="0"
-						cy="200"
-						transform="rotate(-90 100 100)"
-					/>
-				</svg>
 			</div>
 		</section>
 

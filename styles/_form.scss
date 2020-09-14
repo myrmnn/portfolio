@@ -1,5 +1,16 @@
 @import 'variables';
 
+.contact-page-title {
+	font-size: 4em;
+	letter-spacing: 3px;
+	margin: 1em 0;
+	background-image: linear-gradient(to right, tomato, $teal);
+	-webkit-background-clip: text;
+	background-clip: text;
+	display: inline-block;
+	color: transparent;
+}
+
 .contact {
 	background-image: linear-gradient(to bottom right, tomato, indianred);
 	clip-path: polygon(
@@ -60,17 +71,6 @@
 .contact-form {
 	text-align: center;
 	margin-top: 1em;
-
-	&__title {
-		font-size: 4em;
-		letter-spacing: 3px;
-		margin-bottom: 1em;
-		background-image: linear-gradient(to right, tomato, $teal);
-		-webkit-background-clip: text;
-		background-clip: text;
-		display: inline-block;
-		color: transparent;
-	}
 
 	& form {
 		background-color: $lightOrange;
