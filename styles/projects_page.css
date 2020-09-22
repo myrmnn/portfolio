@@ -967,8 +967,8 @@ button:hover {
 }
 
 .tip {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   background-color: #f7f7f7;
   border: 1px dashed;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
@@ -995,7 +995,7 @@ button:hover {
 }
 
 .tip__title, .tip__total, .tip__bill, .tip__percent, .tip__text {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .tip__btn {
