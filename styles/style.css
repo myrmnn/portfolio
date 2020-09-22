@@ -476,6 +476,39 @@
   font-size: 2.2rem;
 }
 
+.sites {
+  background-color: #e4e1e1;
+  padding: 1em;
+}
+
+.sites__img {
+  width: 300px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 700px) {
+  .sites__img {
+    width: auto;
+  }
+}
+
+.sites__listitems {
+  padding: 1em;
+}
+
+.sites__listitems li {
+  list-style: none;
+  font-size: 1.8rem;
+  margin-top: 0.5em;
+}
+
+.sites__link {
+  color: black;
+  font-size: 1.8rem;
+}
+
 .projects {
   display: -webkit-box;
   display: -ms-flexbox;
