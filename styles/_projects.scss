@@ -1,111 +1,118 @@
 .sites {
-  background-color: #e4e1e1;
-  padding: 1em;
+	background-color: #e4e1e1;
+	padding: 1em;
 
-  &__img {
-    width: 300px;
-    border-radius: 5px;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+	&__img {
+		width: 300px;
+		border-radius: 5px;
+		box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
 
-    @media screen and (min-width: 700px) {
-      width: auto;
-    }
-  }
+		@media screen and (min-width: 700px) {
+			width: auto;
+		}
+	}
 
-  &__listitems {
-    padding: 1em;
-  }
+	&__listitems {
+		padding: 1em;
+	}
 
-  &__listitems li {
-    list-style: none;
-    font-size: 1.8rem;
-    margin-top: 0.5em;
-  }
+	&__listitems li {
+		list-style: none;
+		font-size: 2rem;
+		margin: 1em auto;
+	}
 
-  &__link {
-    color: black;
-    font-size: 1.8rem;
-  }
+	&__link {
+		color: black;
+		font-size: 1.8rem;
+	}
+
+	&__block,
+	&__quote,
+	&__para {
+		max-width: 500px;
+		font-size: 2rem;
+		margin: 0 auto;
+		background: white;
+	}
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #3dd0c4;
-  margin-bottom: 3em;
-  padding: 8em 0;
-  text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #3dd0c4;
+	margin-bottom: 3em;
+	padding: 2em 0;
+	text-align: center;
+	justify-content: space-evenly;
 
-  &__div {
-    margin-bottom: 3em;
-  }
+	&__div {
+		margin-bottom: 3em;
+	}
 }
 
 .projects__title {
-  font-size: 4em;
-  letter-spacing: 3px;
-  text-align: center;
-  margin: 1em 0;
-}
-
-.moveup {
+	font-size: 4em;
+	letter-spacing: 3px;
+	text-align: center;
+	margin: 1em 0;
 }
 
 .card {
-  perspective: 150rem;
-  -moz-perspective: 150rem;
-  position: relative;
-  cursor: pointer;
-  height: 20rem;
-  width: 200px;
-  margin: 20px auto;
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	cursor: pointer;
+	height: 20rem;
+	width: 200px;
+	margin: 20px;
 
-  &__title {
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 75%;
-  }
+	&__title {
+		position: absolute;
+		left: 50%;
+		top: 75%;
+		font-size: 1.8rem;
+		letter-spacing: 2px;
+		transform: translateX(-50%);
+		text-align: center;
+		width: 75%;
+	}
 
-  &__side {
-    height: 20rem;
-    transition: all 1s ease-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+	&__side {
+		height: 20rem;
+		transition: all 1s ease-out;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 200px;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 
-    &--front {
-      background-image: linear-gradient(to right bottom, #abdfda, white);
+		&--front {
+			background-image: linear-gradient(to right bottom, #abdfda, white);
 
-      &-img {
-        position: absolute;
-        width: 70px;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
+			&-img {
+				position: absolute;
+				width: 70px;
+				top: 40%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
 
-    &--back {
-      transform: rotateY(180deg);
-      background-image: linear-gradient(to left top, tomato, white);
-    }
-  }
+		&--back {
+			transform: rotateY(180deg);
+			background-image: linear-gradient(to left top, tomato, white);
+		}
+	}
 
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
 
-  &:hover &__side--back {
-    transform: rotateY(0deg);
-  }
+	&:hover &__side--back {
+		transform: rotateY(0deg);
+	}
 }
