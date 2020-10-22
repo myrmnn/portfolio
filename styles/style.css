@@ -198,11 +198,16 @@
 .contact__span,
 .contact__span q {
   font-size: 2.95rem;
-  padding: 0.15em;
-  color: white;
+  color: #3dd0c4;
+  background: whitesmoke;
+  width: 180px;
+  display: block;
+  margin: 0.5em auto 0 auto;
+  border-radius: 5px;
 }
 
 .contact__para {
+  color: whitesmoke;
   margin-top: -90px;
   line-height: 2;
   padding: 0.25em;
@@ -217,14 +222,14 @@
     margin: 0 auto;
   }
   .contact__para {
-    margin-top: -140px;
+    margin-top: -120px;
     line-height: 2;
   }
 }
 
 @media (min-width: 1000px) {
   .contact {
-    height: 40vh;
+    height: 50vh;
   }
   .contact__para {
     font-size: 2.7rem;
