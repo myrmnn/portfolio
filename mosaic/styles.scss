@@ -96,7 +96,7 @@ button {
   grid-template-rows: repeat(19, 1fr);
   grid-gap: 2px;
   height: 90vh;
-  width: 90%;
+  max-width: 700px;
   margin: 0 auto;
   padding: 1%;
 }
