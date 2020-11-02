@@ -153,9 +153,8 @@ button:hover {
       grid-template-columns: repeat(19, 1fr);
   -ms-grid-rows: (1fr)[19];
       grid-template-rows: repeat(19, 1fr);
-  grid-gap: 10px;
-  max-width: 700px;
-  min-width: 600px;
+  grid-gap: 2px;
+  max-width: 600px;
   height: 90vh;
   margin: 0 auto;
   padding: 1%;
