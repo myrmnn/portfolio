@@ -409,7 +409,7 @@
 }
 
 .header__span {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 2.2rem;
   font-weight: 600;
 }
@@ -474,7 +474,7 @@
 }
 
 .footer__icon {
-  width: 75px;
+  width: 50px;
 }
 
 .footer__para {
