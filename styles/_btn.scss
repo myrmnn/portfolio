@@ -1,11 +1,11 @@
-@import 'variables';
+@import "variables";
 
 .btn {
 	width: 90%;
 	margin: 1em 0;
 	padding: 0.5em;
 	font-size: $textFontSize;
-	font-family: 'Dosis', sans-serif;
+	font-family: "Dosis", sans-serif;
 	border: none;
 	border-radius: 20px;
 	background-color: tomato;
@@ -33,12 +33,16 @@
 			text-decoration: none;
 			color: black;
 			font-size: $textFontSize;
-			font-family: 'Dosis', sans-serif;
+			font-family: "Dosis", sans-serif;
 		}
 	}
 
 	@media (min-width: $breakpoint-tablet) {
 		width: 200px;
+
+		&--fe-projects {
+			width: 250px;
+		}
 
 		&--card {
 			width: 150px;
