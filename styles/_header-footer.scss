@@ -1,147 +1,148 @@
 @import "variables";
 
 .menu {
-  position: absolute;
-  height: 20px;
-  width: 22.5px;
-  top: 20px;
-  right: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	position: absolute;
+	height: 20px;
+	width: 22.5px;
+	top: 20px;
+	right: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
 
-  @media (min-width: $breakpoint-tablet) {
-    display: none;
-  }
+	@media (min-width: $breakpoint-tablet) {
+		display: none;
+	}
 }
 
 .topbar {
-  background-color: black;
-  height: 2px;
-  width: 100%;
-  transition: all 0.5s ease;
-  transform-origin: 0 100%;
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform-origin: 0 100%;
 }
 
 .middlebar {
-  background-color: black;
-  height: 2px;
-  width: 100%;
-  transition: all 0.5s ease;
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
 }
 
 .bottombar {
-  background-color: black;
-  height: 2px;
-  width: 100%;
-  transition: all 0.5s ease;
-  transform-origin: 0 100%;
+	background-color: black;
+	height: 2px;
+	width: 100%;
+	transition: all 0.5s ease;
+	transform-origin: 0 100%;
 }
 
 .close .topbar {
-  transform: rotate(42deg) scaleX(1.2);
-  background-color: tomato;
+	transform: rotate(42deg) scaleX(1.2);
+	background-color: tomato;
 }
 
 .close .middlebar {
-  opacity: 0;
-  transform: scaleX(0);
+	opacity: 0;
+	transform: scaleX(0);
 }
 
 .close .bottombar {
-  transform: rotate(-42deg) scaleX(1.2);
-  background-color: tomato;
+	transform: rotate(-42deg) scaleX(1.2);
+	background-color: tomato;
 }
 
 .header {
-  padding: 1em;
-  background-color: $lightBlue;
-  position: sticky;
-  top: -1px;
-  z-index: 2;
-  margin: 0;
+	padding: 1em;
+	background-color: $lightBlue;
+	position: sticky;
+	top: -1px;
+	z-index: 2;
+	margin: 0;
 
-  &__li {
-    padding: 0.6em;
-    margin: 0.5em;
-    color: pink;
-    width: 100px;
-    border-radius: 25px;
-    transition: 0.3s linear;
-    background-color: whitesmoke;
-    box-shadow: 0 8px 6px -6px black;
+	&__li {
+		padding: 0.6em;
+		margin: 0.5em;
+		color: pink;
+		width: 100px;
+		border-radius: 25px;
+		transition: 0.3s linear;
+		background-color: whitesmoke;
+		box-shadow: 0 8px 6px -6px black;
 
-    &:hover {
-      transform: translateY(5px);
-      box-shadow: none;
-    }
-  }
+		&:hover {
+			transform: translateY(5px);
+			box-shadow: none;
+		}
+	}
 
-  & .robot {
-    width: 50px;
-    // padding: .75px;
-    transition: 0.3s ease-in;
-    animation: slideInLeftRobot 6s ease;
+	& .robot {
+		width: 50px;
+		// padding: .75px;
+		transition: 0.3s ease-in;
+		animation: slideInLeftRobot 6s ease;
 
-    &:hover {
-      transform: translateX(-10%);
-    }
-  }
+		&:hover {
+			transform: translateX(-10%);
+		}
+	}
 
-  &__span {
-    font-family: "Courier New", Courier, monospace;
-    font-size: $textFontSize;
-    font-weight: 600;
-  }
+	&__span {
+		font-family: "Courier New", Courier, monospace;
+		font-size: $textFontSize;
+		font-weight: 600;
+	}
 
-  &__list {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    text-align: center;
-    display: none;
+	&__list {
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		list-style-type: none;
+		text-align: center;
+		display: none;
 
-    @media (min-width: $breakpoint-tablet) {
-      display: flex;
-    }
+		@media (min-width: $breakpoint-tablet) {
+			display: flex;
+		}
 
-    & a {
-      text-decoration: none;
-      font-size: $textFontSize;
-      color: black;
-    }
-  }
+		& a {
+			text-decoration: none;
+			font-size: $textFontSize;
+			color: black;
+		}
+	}
 
-  @media (min-width: $breakpoint-tablet) {
-    &__list {
-      flex-direction: row;
-    }
+	@media (min-width: $breakpoint-tablet) {
+		&__list {
+			flex-direction: row;
+		}
 
-    .robot {
-      width: 75px;
-    }
+		.robot {
+			width: 75px;
+		}
 
-    &__list {
-      padding: 0.75em;
-    }
-  }
+		&__list {
+			padding: 0.75em;
+		}
+	}
 }
 
 .footer {
-  background-color: $lightBlue;
-  display: flex;
-  padding: 2em 0;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
+	background-color: $lightBlue;
+	display: flex;
+	padding: 2em 0;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
 
-  &__icon {
-    width: 50px;
-  }
+	&__icon {
+		width: 50px;
+	}
 
-  &__para {
-    font-size: $textFontSize;
-  }
+	&__para {
+		font-size: $textFontSize;
+	}
 }
