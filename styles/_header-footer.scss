@@ -81,7 +81,6 @@
 
 	& .robot {
 		width: 50px;
-		// padding: .75px;
 		transition: 0.3s ease-in;
 		animation: slideInLeftRobot 6s ease;
 
@@ -97,7 +96,7 @@
 	}
 
 	&__list {
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
 		list-style-type: none;
